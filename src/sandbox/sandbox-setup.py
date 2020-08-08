@@ -9,7 +9,8 @@ import subprocess
 cmds = ["sudo yum install git -y && sudo yum install wget -y && sudo yum install curl -y && sudo yum install unzip -y",
 "sudo wget https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip && sudo unzip packer_1.5.5_linux_amd64.zip && sudo mv packer /bin/ && sudo rm -rf ./packer*",
 "sudo wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip && sudo unzip terraform_0.12.24_linux_amd64.zip && sudo mv terraform /bin/ && sudo rm -rf ./terraform*",
-"sudo cp ./ansible.repo /etc/yum.repos.d/ && sudo yum install ansible -y"]
+"sudo cp ./ansible.repo /etc/yum.repos.d/ && sudo yum install ansible -y",
+"sudo curl 'https://s3.amazonaws.com/aws-cli/awscli-bundle.zip' -o 'awscli-bundle.zip' && sudo unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && sudo rm -rf ./awscli-bundle*"]
 #yum update -y && yum upgrade -y && yum install epel-release -y
 
 #Logic to execute all the commans one by one
