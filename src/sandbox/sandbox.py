@@ -13,7 +13,7 @@ cmds = ["sudo yum install git -y && sudo yum install wget -y && sudo yum install
 "sudo curl 'https://s3.amazonaws.com/aws-cli/awscli-bundle.zip' -o 'awscli-bundle.zip' && sudo unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && sudo rm -rf ./awscli-bundle*"]
 #yum update -y && yum upgrade -y && yum install epel-release -y
 
-#Logic to execute all the commans one by one
+#Logic to execute all the commands one by one
 for cmd in cmds:
     print("command name", cmd)
     cmd_execution = subprocess.Popen(cmd, stdout = subprocess.PIPE, stderr = subprocess.STDOUT, shell = True)
